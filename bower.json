@@ -1,0 +1,25 @@
+{
+  "name": "Security Online",
+  "description": "Security Online",
+  "main": "",
+  "keywords": [
+    "security"
+  ],
+  "authors": [
+    "volkov <volkov99.at@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

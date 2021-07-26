@@ -1,0 +1,933 @@
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff"), url("../fonts/Ubuntu-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Ubuntu-MediumItalic";
+  src: url("../fonts/Ubuntu-MediumItalic.woff") format("woff"), url("../fonts/Ubuntu-MediumItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff"), url("../fonts/Ubuntu-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+body, html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-size: 15px;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+textarea {
+  resize: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoratio {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+p, nav {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+}
+
+input {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 576px;
+  margin: 0 auto;
+  width: 98%;
+}
+
+h1 {
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #313646;
+}
+
+.main {
+  padding-bottom: 60px;
+}
+
+.main .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+}
+
+.main .title-img {
+  margin-right: 22px;
+}
+
+.main .title h1 {
+  font-family: "Ubuntu-Medium";
+  font-size: 24px;
+  line-height: 28px;
+  color: #313646;
+}
+
+.main .title h1 span {
+  font-family: "Ubuntu-MediumItalic";
+  color: #56D042;
+}
+
+.main .slider {
+  margin-top: 44px;
+  margin-bottom: 34px;
+}
+
+.main .slider__item {
+  background: -webkit-gradient(linear, right top, left top, from(#FFC83C), to(#FE4848)), #9EA1AA;
+  background: linear-gradient(270deg, #FFC83C 0%, #FE4848 100%), #9EA1AA;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 8px 25px;
+}
+
+.main .slider__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .slider__item a .slider-text__title {
+  font-family: "Roboto-Medium";
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.main .slider__item a .slider-text__button {
+  font-family: "Roboto-Regular";
+  font-size: 9px;
+  color: #FFFFFF;
+  margin-top: 15px;
+}
+
+.main .slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 18px;
+}
+
+.main .slider .slick-dots li {
+  margin: 0 3px;
+}
+
+.main .slider .slick-dots li button {
+  color: #FFF;
+  background: #E5E5E5;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  height: 5px;
+  width: 5px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.main .slider .slick-dots .slick-active button {
+  background: #9EA1AA;
+}
+
+.main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.main .content__item {
+  background: #F4F4F4;
+  border-radius: 20px;
+  width: 49%;
+  height: 183px;
+  margin-bottom: 12px;
+}
+
+.projects {
+  padding-bottom: 140px;
+}
+
+.projects h1 {
+  margin-top: 50px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.projects .project__item {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  padding-top: 16px;
+  padding-bottom: 19px;
+}
+
+.projects .project__item .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .project__item .project-info__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .project__item .project-info__description img {
+  margin-right: 16px;
+  width: 39px;
+  height: 39px;
+}
+
+.projects .project__item .project-info__description .project-info__text h2 {
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #313646;
+  margin-bottom: 7px;
+}
+
+.projects .project__item .project-info__description .project-info__text p {
+  font-family: "Ubuntu-Regular";
+  font-size: 11px;
+  line-height: 13px;
+  color: #80838E;
+}
+
+.projects .project__item .project-info .projrct-info__status {
+  font-family: "Ubuntu-Regular";
+  font-size: 8px;
+  line-height: 9px;
+  text-transform: uppercase;
+}
+
+.projects .project__item .project-info .projrct-info__status_blue {
+  color: #3C67FF;
+}
+
+.projects .project__item .project-info .projrct-info__status_lime {
+  color: #3BAF28;
+}
+
+.projects .project__item .project-create {
+  padding-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .project__item .project-create p {
+  font-family: "Ubuntu-Regular";
+  font-size: 10px;
+  line-height: 11px;
+  color: #8C8F99;
+}
+
+.projects .project-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 13px 24px;
+  background: #56D042;
+  -webkit-box-shadow: 0px 10px 10px rgba(59, 175, 40, 0.2);
+          box-shadow: 0px 10px 10px rgba(59, 175, 40, 0.2);
+  border-radius: 30px;
+  border: none;
+  bottom: 80px;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.projects .project-add img {
+  margin-right: 10px;
+}
+
+.projects .project-add p {
+  font-family: "Ubuntu-Regular";
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.delta {
+  padding-bottom: 60px;
+}
+
+.delta .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 21px;
+}
+
+.delta .back img {
+  margin-right: 10px;
+}
+
+.delta .back p {
+  font-family: "Ubuntu-Regular";
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #3BAF28;
+}
+
+.delta h1 {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+  color: #313646;
+}
+
+.delta .modules {
+  margin-top: 28px;
+}
+
+.delta .modules .module-item__info .module-item__number {
+  font-family: "Ubuntu-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #717378;
+  margin-bottom: 6px;
+}
+
+.delta .modules .module-item__info .module-item__name {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #313646;
+}
+
+.delta .modules .module-item__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 26px 0;
+}
+
+.delta .modules .module-item__arrow {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.delta .modules .module-item .open .module-item__arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.delta .modules .module-item__content {
+  display: none;
+}
+
+.delta .modules .module-item__content ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 0;
+  position: relative;
+}
+
+.delta .modules .module-item__content ul li a .module-item__point {
+  width: 8px;
+  height: 8px;
+  background: #E5E5E5;
+  margin-right: 15px;
+  margin-top: 3px;
+  border-radius: 50%;
+}
+
+.delta .modules .module-item__content ul li a .module-item__point_lime {
+  background: #56D042;
+}
+
+.delta .modules .module-item__content ul li a .module-item__point_blue {
+  background: #3C67FF;
+}
+
+.delta .modules .module-item__content ul li .module-item__text h3 {
+  font-family: "Ubuntu-Regular";
+  font-size: 14px;
+  line-height: 16px;
+  color: #313646;
+  margin-bottom: 7px;
+}
+
+.delta .modules .module-item__content ul li .module-item__text p {
+  font-family: "Ubuntu-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #A6A6A6;
+}
+
+.delta .modules .module-item__content ul li a::after {
+  content: "";
+  width: calc(100% - 22px);
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+  height: 1px;
+  background: #E5E5E5;
+}
+
+.delta .modules .module-item:first-child {
+  padding-top: 0;
+}
+
+.module-description {
+  padding-bottom: 80px;
+}
+
+.module-description .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 21px;
+}
+
+.module-description .back img {
+  margin-right: 10px;
+}
+
+.module-description .back p {
+  font-family: "Ubuntu-Regular";
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #3BAF28;
+}
+
+.module-description .done {
+  background: #CDF4E3;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 18px;
+  margin-bottom: 37px;
+}
+
+.module-description .done-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.module-description .done-info img {
+  margin-right: 13px;
+}
+
+.module-description .done-info p {
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  color: #313646;
+}
+
+.module-description .done a {
+  font-family: "Ubuntu-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #8C93AA;
+}
+
+.module-description .module__number {
+  font-family: "Ubuntu-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #717378;
+}
+
+.module-description .module h1 {
+  font-family: "Ubuntu-Medium";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #313646;
+  margin: 13px 0 18px 0;
+}
+
+.module-description .module__description {
+  background: #F8F9FF;
+  border-radius: 5px;
+  padding: 12px;
+  padding-right: 30px;
+  position: relative;
+  margin-bottom: 53px;
+}
+
+.module-description .module__description p {
+  font-family: "Ubuntu-Regular";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 170.9%;
+  color: #717378;
+}
+
+.module-description .module__description p span {
+  font-family: "Ubuntu-Medium";
+}
+
+.module-description .module__description img {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.module-description .module-tasks {
+  position: relative;
+  margin-left: 65px;
+}
+
+.module-description .module-tasks h2 {
+  font-family: "Ubuntu-Regular";
+  font-size: 18px;
+  line-height: 21px;
+  color: #313646;
+  margin-bottom: 30px;
+  margin-top: 45px;
+  position: relative;
+}
+
+.module-description .module-tasks h2:first-child {
+  margin-top: 0;
+}
+
+.module-description .module-tasks h2::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #F2F3F8;
+  border-radius: 50%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -31px;
+}
+
+.module-description .module-tasks p {
+  font-family: "Ubuntu-Regular";
+  font-size: 14px;
+  line-height: 150%;
+  color: #313646;
+}
+
+.module-description .module-tasks::before {
+  content: "";
+  width: 2px;
+  background: #F2F3F8;
+  height: calc(100% - 5px);
+  position: absolute;
+  left: -25px;
+  top: 5px;
+}
+
+.module-description .module-document {
+  margin-top: 74px;
+}
+
+.module-description .module-document h3 {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #313646;
+  margin-bottom: 22px;
+}
+
+.module-description .module-document__item a {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.module-description .module-document__item a img {
+  margin-right: 12px;
+}
+
+.module-description .module-document__item a p {
+  font-family: "Ubuntu-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #3C67FF;
+}
+
+.module-description .module-document__item a:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 0.5px solid #9EA1AA;
+  background: #FFF;
+}
+
+footer nav ul {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer nav ul li a p {
+  margin-top: 5px;
+  font-family: "Ubuntu-Regular";
+  font-size: 9px;
+  line-height: 10px;
+  color: #9EA1AA;
+}
+/*# sourceMappingURL=main.css.map */
